@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba de componente <GiftGrid /> Debe de crearce el componente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Mazinger
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading
+  </p>
+  <div
+    className="card-grid "
+  />
+</Fragment>
+`;
+
+exports[`Prueba de componente <GiftGrid /> debe de mostrar items cuando se cargan imágenes useFechtGifs  1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Mazinger
+  </h3>
+  <div
+    className="card-grid "
+  >
+    <GiftGridItem
+      id="ABC"
+      key="ABC"
+      title="Cualquier cosa"
+      url="https://cualquiercosa/imagen/cosa.jpg"
+    />
+  </div>
+</Fragment>
+`;

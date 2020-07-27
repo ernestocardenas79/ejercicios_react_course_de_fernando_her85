@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HookApp } from './HookApp';
+import { Padre } from './components/07-tarea-memo/Padre';
 
 
 ReactDOM.render(
 
-    <HookApp/>,
+    <Padre/>,
 
   document.getElementById('root')
 );

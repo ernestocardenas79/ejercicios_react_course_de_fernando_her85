@@ -29,7 +29,7 @@ describe('pruebas useFetch', () => {
 
   test('debe de manejar el error', async () => {
     const { result, waitForNextUpdate } = renderHook(() =>
-      useFetch('https://www.breakingbadapi.com/adpi/quotes/1')
+      useFetch('https://reqres.in/aApi/users?page=2')
     );
     await waitForNextUpdate();
 

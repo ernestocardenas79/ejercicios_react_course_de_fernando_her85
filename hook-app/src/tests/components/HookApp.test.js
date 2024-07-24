@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import "@testing-library/jest-dom";
-import { HookApp } from "../../HookApp";
+import { HookApp } from "../../../../Hook-app/src/HookApp";
 
 describe("Prueba de componente <GiftGrid />", () => {
   test("Debe de crearce el componente", () => {

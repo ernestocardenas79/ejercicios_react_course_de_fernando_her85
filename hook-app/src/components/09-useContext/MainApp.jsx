@@ -1,4 +1,3 @@
-import React from 'react';
 import { AppRouter } from './AppRouter';
 import { UserContext } from './UserContext';
 import { useState } from 'react';

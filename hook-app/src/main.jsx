@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { TodoApp } from './components/08-useReducer/TodoApp'
+import { MainApp } from './components/09-useContext/MainApp'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <TodoApp/>
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <BrowserRouter>
+    <MainApp/>
+    </BrowserRouter>
+  // </React.StrictMode>,
 )

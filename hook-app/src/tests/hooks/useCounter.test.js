@@ -1,14 +1,15 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useCounter } from '../../hooks/useCounter';
 
 describe('Pruebas en useCounter', () => {
   test('debe de retornar los valores por defecto', () => {
     const { result } = renderHook(() => useCounter());
+    const {counter, decrement, increment, reset} = result.current;
 
-    expect(result.current.counter).toBe(10);
-    expect(typeof result.current.increment).toBe('function');
-    expect(typeof result.current.decrement).toBe('function');
-    expect(typeof result.current.reset).toBe('function');
+    expect(counter).toBe(10);
+    expect(increment).toEqual(expect.any(Function));
+    expect(decrement).toEqual(expect.any(Function));
+    expect(reset).toEqual(expect.any(Function));
   });
 
   test('debe de tener el counter en 100', () => {
@@ -22,9 +23,9 @@ describe('Pruebas en useCounter', () => {
 
     const { increment } = result.current;
 
-    act(() => {
-      increment();
-    });
+    act(() => 
+      increment()
+    );
 
     const { counter } = result.current;
 
@@ -35,9 +36,9 @@ describe('Pruebas en useCounter', () => {
 
     const { decrement } = result.current;
 
-    act(() => {
-      decrement();
-    });
+    act(() => 
+      decrement()
+    );
 
     const { counter } = result.current;
 

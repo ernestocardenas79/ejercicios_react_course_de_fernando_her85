@@ -9,7 +9,7 @@ export const Login = () => {
   }
   return (
     <div>
-      <h1>Login</h1>
+      <h1 aria-label='h1'>Login</h1>
       <button className="btn btn-primary" onClick={()=>setUser(user)}>
         Login
       </button>

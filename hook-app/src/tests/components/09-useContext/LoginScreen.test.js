@@ -1,6 +1,5 @@
-import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Login } from '../../../components/09-useContext/Login';
-import { mount } from 'enzyme';
 import { UserContext } from '../../../components/09-useContext/UserContext';
 
 describe('Preubas en <LoginScreen />', () => {
@@ -10,16 +9,15 @@ describe('Preubas en <LoginScreen />', () => {
     id: 774,
   };
 
-  const wrapper = mount(
-    <UserContext.Provider value={{ setUser }}>
-      <Login />
-    </UserContext.Provider>
-  );
-  test('debe de mostrarse correctamente', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
   test('debe de llamarse la funcion setUser con lo argumentos esperados', () => {
-    wrapper.find('button').prop('onClick')();
+    render(
+      <UserContext.Provider value={{ setUser }}>
+        <Login />
+      </UserContext.Provider>
+    );
+
+    const loginButton = screen.getByRole('button');
+    fireEvent.click(loginButton)
 
     expect(setUser).toHaveBeenCalledWith(user);
   });

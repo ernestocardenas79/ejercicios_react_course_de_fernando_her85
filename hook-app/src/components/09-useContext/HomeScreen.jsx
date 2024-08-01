@@ -8,7 +8,7 @@ export const HomeScreen = () => {
     <div>
       <h1>HomeScreen</h1>
       <hr />
-      <pre>
+      <pre aria-label='pre'>
         { JSON.stringify(user, null, 4)}
       </pre>
     </div>

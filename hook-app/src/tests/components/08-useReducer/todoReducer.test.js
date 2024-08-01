@@ -5,10 +5,10 @@ describe('Pruebas con el reducer', () => {
   test('debe de retornar el estado por defecto', () => {
     const state = todoReducer(demoTodos, {});
 
-    expect(state).toEqual(demoTodos);
+    expect(state).toBe(demoTodos);
   });
 
-  describe('debe de agregar un TODO', () => {
+  test('debe de agregar un TODO', () => {
     const newTodo = { id: 3, desc: 'Ver Suits', done: false };
     const newState = todoReducer(demoTodos, {
       type: 'add',
@@ -17,9 +17,10 @@ describe('Pruebas con el reducer', () => {
 
     expect(newState.length).toBe(3);
     expect(newState).toEqual([...demoTodos, newTodo]);
+    expect(newState).toContain(newTodo); // similar al de arriba sole evalula el contenido
   });
 
-  describe('debe de eliminar un todo', () => {
+  test('debe de eliminar un todo', () => {
     const newState = todoReducer(demoTodos, {
       type: 'delete',
       payload: 2,
@@ -29,7 +30,7 @@ describe('Pruebas con el reducer', () => {
     expect(newState).toEqual([demoTodos[0]]);
   });
 
-  describe('debe hacer el TOGGLE del TODO', () => {
+  test('debe hacer el TOGGLE del TODO', () => {
     const state = todoReducer(demoTodos, {
       type: 'toggle',
       payload: 2,

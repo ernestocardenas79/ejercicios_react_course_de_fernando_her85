@@ -5,8 +5,8 @@ export const HeroesContainer = ({asociacion})=>{
     const heroesList = heroes.filter(h=>h.publisher === asociacion);
     
     return (
-        <ul>W
-            {heroesList.map(h=> (<HeroesCard key={h.id} {...h}></HeroesCard>))}
+        <ul>
+            {heroesList.map(h=> (<HeroesCard  key={h.id} {...h}></HeroesCard>))}
         </ul>
     )
 }

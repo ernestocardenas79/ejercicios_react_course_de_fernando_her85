@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export const HeroesCard = ({id, superhero,alter_ego, characters, first_appearance})=>{
     
     return (
-        <div className="col-8">
+        <div className="col-3">
             <div className="card-body">
                 <img src={`assets/heroes/${id}.jpg`} alt={superhero} />
                 <h5 className="card-title">{superhero}</h5>

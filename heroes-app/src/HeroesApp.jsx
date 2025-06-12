@@ -1,5 +1,7 @@
-export const HeroesApp = ()=>{
-    return <>
+export const HeroesApp = () => {
+    return (
+        <>
             <h1>Heores App</h1>
         </>
-}
+    );
+};

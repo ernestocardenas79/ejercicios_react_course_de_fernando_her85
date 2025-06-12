@@ -10,7 +10,7 @@ export const HeroCard = ({id, superhero,alter_ego, characters, first_appearance}
                 </div>
                 <div className="card-body">
                 <h5 className="card-title">{superhero}</h5>
-                <h7 className="card-text">{alter_ego}</h7>
+                <h6 className="card-text">{alter_ego}</h6>
                 {
                     (alter_ego !== characters) && (<p>{characters}</p>)
                 }

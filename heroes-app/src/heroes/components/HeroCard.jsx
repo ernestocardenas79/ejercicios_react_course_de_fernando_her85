@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom"
 
-export const HeroesCard = ({id, superhero,alter_ego, characters, first_appearance})=>{
+export const HeroCard = ({id, superhero,alter_ego, characters, first_appearance})=>{
     
     return (
-        <div className="col-3">
-            <div className="card-body">
-                <img src={`assets/heroes/${id}.jpg`} alt={superhero} />
+        <div className="col">
+            <div className="card">
+                <div className="row no-glutters">
+                    <img className="card-img" src={`assets/heroes/${id}.jpg`} alt={superhero} />
+                </div>
+                <div className="card-body">
                 <h5 className="card-title">{superhero}</h5>
                 <h7 className="card-text">{alter_ego}</h7>
                 {
@@ -19,8 +22,8 @@ export const HeroesCard = ({id, superhero,alter_ego, characters, first_appearanc
                 <Link to={`/hero/${id}`}>
                     Mas...
                 </Link>
+                </div>
             </div>
         </div>
-        
     )
 }

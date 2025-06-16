@@ -1,17 +1,23 @@
-import { useNavigate } from "react-router-dom"
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
-export const LoginPage = ()=>{
-    const navigate = useNavigate()
+export const LoginPage = () => {
+    const navigate = useNavigate();
+    const { login } = useContext(AuthContext);
 
-    const onLogin =()=>{
-        navigate('/marvel',{replace:true})
-    }
+    const onLogin = () => {
+        login('Ernesto Cardenas');
+        navigate('/marvel', { replace: true });
+    };
 
     return (
         <div className="container mt-5">
-         <h1>Login Page</h1>
-         <hr />
-         <button className="btn btn-primary ms-3 w-25" onClick={onLogin}>Login</button>
+            <h1>Login Page</h1>
+            <hr />
+            <button className="btn btn-primary ms-3 w-25" onClick={onLogin}>
+                Login
+            </button>
         </div>
-    )
-}
+    );
+};

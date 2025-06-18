@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "heroes-app"
+		},
+				{
+			"path": "journal-app"
 		}
 	],
 	"settings": {

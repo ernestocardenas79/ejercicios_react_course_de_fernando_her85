@@ -5,6 +5,7 @@ import { JournalApp } from "./JournalApp";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+   
     <JournalApp />
   </StrictMode>
 );
